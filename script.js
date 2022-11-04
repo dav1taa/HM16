@@ -1,32 +1,32 @@
 
 
-function car (mark, model, year){
-    this.mark = mark;
-    this.model = model;
-    this.year = year;
+function Car (Mark, Model, Year){
+    this.mark = Mark;
+    this.model = Model;
+    this.year = Year;
     this.getCarInfo = function() {
-        document.write("მარკა" + this.mark +  "მოდელი" + this.model + "released in" + this.year );
+        document.write("მარკა" + this.Mark +  "მოდელი" + this.Model + "released in" + this.year );
 
     }
 }
 
 
-function person (name,age) {
-    this.name = name;
-    this.age = age;
-    this.driveCar = function (car) {
-        document.write (" dadis am manqanit"+ this.cars)
+function Person (Name,Age) {
+    this.name = Name;
+    this.age = Age;
+    this.driveCar = function (Car) {
+        document.write ("მას ყავს" + " " + Car.mark + " " + Car.model + ", " + "რომელიც გამოშვებულია" + " " + Car.year + " წელს.")
     }
     this.displayInfo = function (){
-        document.write ("saxeli" + this.name + "asaki" + this.age)
+        document.write (this.name +  " " + this.age + " წლის," )
     }
 
 
 }
 
 
-var tom = new person ("tom",26,"tesla");
+var tom = new Person ("ტომს ყავს მანქანა და არის ",24);
 tom.displayInfo()
 
-var tesla = new car ("tesla", "model s", 2008);
+var tesla = new Car ("Tesla", "Model S", 2015);
 tom.driveCar(tesla);
